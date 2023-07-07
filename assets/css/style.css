@@ -1,0 +1,599 @@
+:root {
+    --font-priamry: 'Assistant', sans-serif;
+    --fontWeight-primary: 400;
+    --fontSize-priamry: 1.3rem;
+
+    --lineHeight-priamry: 1.3;
+    --lineHeight-m: 1.5;
+    --lineHeight-l: 1.72;
+    --letterSpacing-s:0.02em;
+    --letterSpacing-m:0.03em;
+    --letterSpacing-l:0.04em;
+    --spacing-s: 0.8rem;
+    --spacing-s-m: 1rem;
+    --spacing-s-ml:1.15rem;
+    --spacing-s-l: 1.4rem;
+    --spacing-m: 1.6rem;
+    --spacing-l: 2.4rem;
+    --spacing-lm: 3.2rem;
+    --spacing-lg: 4rem;
+    --spacing-lr: 5.1rem;
+    --spacing-b: 6.4rem;
+    --white-Color: #FFFFFF;
+    --whiteDark-Color: #F0F0F0;
+    --back-Color: #000000;
+    --backLight-Color: #121212;
+    --blue-Color: #3752B2;
+    --grey-Color: #7D7D7D;
+    --greyDark-Color:#4d4d4d;
+    --greyLight-Color: #D0D0D0;
+    --greyShadown: #e1e3e5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}   
+
+body {
+    font-family: var(--font-priamry);
+    font-weight: var(--fontWeight-primary);
+    font-size: var(--fontSize-priamry);
+    line-height: var(--lineHeight-priamry);
+    color: var(--back-Color);
+}
+
+.body-txt1 {
+    font-size: 1.6rem;
+    line-height: 1.72;
+    letter-spacing: 0.04em;
+}
+
+.body-txt2 {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.heading-0 {
+    font-size: 5.2rem;
+}
+
+.heading-1 {
+    font-size: 4rem;
+}
+
+.heading-2 {
+    font-size: 2.4rem;
+}
+
+.heading-3 {
+    font-size: 1.8rem;
+    line-height: 1.16;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img, a, .d-block {
+    display: block;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-plain {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+img ,.f-width {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--fontWeight-primary);
+}
+
+ul {
+    list-style: none;
+}
+
+.header__navigation, .hamburger,
+.main__menu, .icon__menu-item,
+.icon__cart-notice, #banner , .banner__content,
+.product__headline, #collage__link, .play-button,
+#desc div, .form_content, .form__email 
+ {
+    align-items: center;
+}
+
+/* Custom Main CSS */ 
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: var(--white-Color);
+    box-shadow: inset 0px -1px 0px var(--greyShadown);
+}
+
+.header__navigation {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "logo header-nav icon-right";
+    padding: 1.6rem 6.4rem;
+    min-height: 7.6rem;
+    gap: 5.1rem;
+}
+
+.header__title {
+    padding: .8rem;
+    text-align: center;
+    font-size: 1.6rem;
+    box-shadow: inset 0px -1px 0px var(--greyShadown);
+}
+
+.hamburger {
+    width: 4rem;
+    height: 4rem;
+    padding: 1.1rem;
+    justify-content: center;
+    grid-area: icon-left;
+}
+
+.hamburger__icon {
+    position: relative;
+    width: 2rem;
+    height: 1px;
+    background-color: var(--back-Color);
+    transition: all .2s ease-in;
+}
+
+.hamburger__icon::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--back-Color);
+    position: absolute;
+    transform: translateY(-1.1rem);
+    transition: all .2s ease-in;
+}
+
+.hamburger__icon::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--back-Color);
+    position: absolute;
+    transform: translateY(1.1rem);
+    transition: all .2s ease-in;
+}
+
+.hamburger.open .hamburger__icon{
+    background-color: transparent;
+}
+
+.hamburger.open .hamburger__icon::before {
+    transform: rotate(45deg);
+}
+
+.hamburger.open .hamburger__icon::after {
+    transform: rotate(-45deg);
+}
+
+.header__logo {
+    grid-area: logo;
+}
+
+.header__logo img {
+    width: 9rem;
+}
+
+.main__menu {
+    grid-area: header-nav;
+    gap: 1.6rem;
+}
+.menu__item {
+    position: relative;
+}
+.menu__item:hover .sub__menu {
+    display: block;
+}
+
+.menu__link {
+    gap: 0.8rem; 
+}
+
+.menu__link img, 
+.icon__item,
+.icon__login img,
+.icon__cart,
+#collage__link img,
+.form__btn img,
+.icon__menu-item li {
+    width: 2rem;
+    height: 2rem;
+}
+
+.icon-right {
+    grid-area: icon-right;
+}
+
+.icon__menu {
+    background-color: var(--whiteDark-Color);
+    gap: 3.2rem;
+    padding: 2.4rem 0 3.2rem 2.4rem;
+}
+
+.icon__login {
+    padding: 0.8rem 0;
+    gap: 0.8rem;
+}
+
+.sub__menu {
+    position: absolute;
+    top: 230%;
+    left: -100%;
+    background: var(--white-Color);
+    border: 1px solid var(--greyLight-Color);
+    min-width: 19.7rem;
+    min-height: 28.6rem;
+    transform-origin: 50% top;
+    animation: subGrowth .25s ease-in;
+    padding: 3.2rem 1.6rem;
+    display: none;
+}
+
+@keyframes subGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.sub__menu::before {
+    content: "";
+    position: absolute;
+    background:transparent;
+    top: -10%;
+    left: 0%;
+    width: 100%;
+    height: 3rem;
+}
+
+.icon__cart {
+    position: relative;
+}
+
+.icon__cart-notice {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    font-size: 1rem;
+    border-radius: 50%;
+    color: var(--white-Color);
+    background-color: var(--back-Color);
+    justify-content: center;
+}
+
+.icon__menu-item,
+.icon-right,
+.subMenu__list,
+#footer__quick,
+#footer__info,
+#footer__our,
+.contact, .payment {
+    gap: 2.4rem;
+} 
+
+/* CUSTOM BANNER CSS*/
+#banner {
+    min-height: 61.6rem;
+    background: url(/dawnnn/assets/img/banner.png) no-repeat center / cover;
+    margin-top: 7.6rem;
+    position: relative;
+}
+
+#banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 18, 18, 0.4);
+}
+
+#banner ,
+.banner__content {
+    justify-content: center;
+    text-align: center;
+}
+
+.banner__content {
+    width: 46.4rem;
+    height: 31.1rem;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 4rem;
+    z-index: 1;
+}
+
+.banner__content,
+.banner__btn {
+    color: var(--white-Color);
+}
+
+.banner__btn {
+    border: .1rem solid var(--white-Color);
+    padding: 1.6rem;
+    font-size: 1.6rem;
+    line-height: 0.9375;
+    letter-spacing: 0.04em;
+}
+
+/* CUSTOM PRODUCT CSS */
+section ~ :not(#banner, footer){
+    margin: 6.4rem;
+}
+
+.product__headline {
+    gap: 3.2rem;
+    text-align: center;
+}
+
+#product__item {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    row-gap: 2.4rem;
+    margin-top: 6.4rem;
+}
+
+.product__top {
+    position: relative;
+}
+
+.product__sale {
+    position: absolute;
+    left: 0.8rem;
+    bottom: 0.8rem;
+    padding: 0.4rem 1.2rem;
+    border-radius: 9.9rem;
+    border: none;
+    background: var(--blue-Color);
+    color: var(--white-Color);
+}
+
+.product__info {
+    margin-top: .2rem;
+    color: var(--backLight-Color);
+}
+
+#product-price span:nth-child(2){
+    text-decoration: line-through;
+}
+
+/* CSS COLLAGE CSS */
+#collage__content {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "bags bags shoes" "bags bags eddy";
+    gap:1rem;
+    margin-top: 2.4rem;
+    color: var(--backLight-Color);
+}
+
+#collage__bags {
+    grid-area: bags;
+}
+
+#collage__shoes {
+    grid-area: shoes;
+}
+
+#collage__link {
+    padding: 1.4rem 2.4rem;
+    gap: 1.15rem;
+    background: var(--whiteDark-Color);
+}
+
+#collage__eddy {
+    position: relative;
+    grid-area: eddy;
+    color: var(--back-Color);
+}
+
+.collage__eddy-title {
+    position: absolute;
+    bottom: 2.4rem;
+    left: 2.4rem;
+}
+
+/* CUSTOM VIDEO CSS*/
+#video {
+    position: relative;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 6.2rem;
+    height: 6.2rem;
+    background-color: var(--white-Color);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.play-button__img {
+    width: 1.8rem;
+    height: 2rem;
+}
+
+/* CUSTOM DESC CSS*/
+#desc {
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "item1 item2";
+    text-align: center;
+}
+
+#desc div {
+    padding: 1.6rem;
+    gap: 1.6rem;
+}
+.desc__item1 {
+    grid-area: item1;
+}
+.desc__item2 {
+    grid-area: item2;
+}
+#desc img {
+    width: 20.2rem;
+    height: 4rem;
+}
+
+/* FOOTER */
+.footer {
+    padding: 6.4rem;
+    box-shadow: inset 0px 1px 0px var(--greyShadown);
+    gap: 6.4rem;
+}
+
+.footer-content {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "item1 item2 item3";
+    gap: 4rem;
+    padding: 0 4rem;
+    color: var(--backLight-Color);
+}
+
+.footer-content a{
+    color: rgba(18, 18, 18, 0.75);
+}
+
+#footer__quick {
+    grid-area: item1;
+}
+
+#footer__info {
+    grid-area: item2;
+}
+
+#footer__logo {
+    grid-area: item3;
+}
+
+#footer__logo h2 {
+    font-family: 'Inter';
+    font-weight: 600;
+    text-align: right;
+    font-size: 2.4rem;
+    letter-spacing: 0.19em;
+    color: var(--back-Color);
+}
+
+.footer__link {
+    gap: 1.6rem;
+}
+
+.form_content {
+    justify-content: space-between;
+}
+
+.form__email {
+    justify-content: space-between; 
+    margin-top: 1.6rem;
+    position: relative;
+}
+.form__email input {
+    font-weight: var(--fontWeight-primary);
+    font-size: 1.6rem;
+    line-height: 0.94;
+    letter-spacing: 0.04em;
+}
+#in_email {
+    width: 33.1rem;
+    height: 4.8rem;
+    color: rgba(18, 18, 18, 0.75);
+    padding: 1.4rem 1.6rem;
+    border: 1px solid var(--grey-Color);
+    outline: none;
+}
+
+.form__btn {
+    position: absolute;
+    right: 1.4rem;
+    top: 1.4rem;
+}
+
+.contact,
+.contry, .language {
+    color: rgba(18, 18, 18, 0.75);
+    font-family: var(--font-priamry);
+    font-weight: var(--fontWeight-primary);
+    font-size: var(--fontSize-priamry);
+    line-height: var(--lineHeight-priamry);
+}
+
+.select-txt {
+    margin-top: 1.2rem;
+    border: 1px solid var(--grey-Color);
+    padding: 0 1rem;
+}
+
+.contry {
+    border: none;
+    outline: none;
+    width: 13rem;
+    padding: 1.25rem 0;
+}
+
+.language {
+    border: none;
+    outline: none;
+    width: 7.5rem;
+    padding: 1.25rem 0;
+}
+
+.payment li {
+    width: 3.8rem;
+    height: 2.4rem;
+}
+
+.copy-right {
+    font-size: 1rem;
+}

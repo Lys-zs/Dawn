@@ -1,0 +1,216 @@
+ /* Mobie */
+ @media (max-width: 989px) { 
+    .hidenOn-mobile {
+        display: none;
+    }
+
+    .heading-0 {
+        font-size: 4rem;
+    }
+    
+    .heading-1 {
+        font-size: 3rem;
+    }
+    
+    .heading-2 {
+        font-size: 2rem;
+    }
+    
+    .heading-3 {
+        font-size: 1.7rem;
+        line-height: var(--lineHeight-priamry);
+    }
+
+    .header__navigation {
+        grid-template-areas: "icon-left logo icon-right";
+        min-height: 5.6rem;
+        padding: .8rem .5rem;
+        position: relative;
+    }
+
+    .header__logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .header__menu {
+        position: fixed;
+        bottom: -.3rem;
+        left: 0;
+        width: 100%;
+        max-width: 33.6rem;
+        background-color: var(--white-Color);
+        box-shadow: inset -1px 0px 0px var(--greyShadown);
+        height: calc(100vh - 9rem);
+        display: grid;
+        grid-template-rows: 1fr auto;
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: transform .35s ease-in-out;
+    }
+
+    .main__menu {
+        grid-area: unset;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        overflow-y: auto;
+        overflow-x: hidden;
+        position: relative;
+        padding: 6.4rem 3.2rem 0 3.2rem;
+        font-weight: 600;
+        font-size: 1.8rem;
+        line-height: 0.833333;
+        letter-spacing: 0.04em;
+    }
+
+    .menu__item {
+        width: 100%;
+        padding: 0.8rem 0;
+        position: unset;
+    }
+
+    .menu__link {
+        justify-content: space-between;
+    }
+
+    .header__menu.open {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    .icon-right {
+        padding-right: 1rem;
+    }
+
+    .sub__menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 9rem);
+        background-color: var(--white-Color);
+        transform: translateX(-100%);
+        box-shadow: -1px 0px 0px 0px var(--greyShadown) inset;
+        padding: 1.4rem 3.2rem 0;
+        transition:  all .3s ease-in-out;
+        animation: none;
+        border: none;
+        z-index: 99;
+    }
+
+    .sub__menu.open {
+        transform: translateX(0);
+    }
+
+    .subMenu__list {
+        gap: 1rem;
+    }
+
+    .subMenu__item {
+        padding: .8rem 0;
+    }
+
+    .subMenu__item img:first-child {
+        rotate: 180deg;
+        max-width: 2rem;
+        max-height: 2rem;
+    }
+
+    .btn-back {
+        gap: 0.8rem;
+        align-items: center;
+    }
+
+    /* CUSTOM BANNER CSS */
+    #banner {
+        margin-top: 9.2rem;
+        min-height: 39.8rem;
+        background-image: url(/dawnnn/assets/img/banner-mobie.png);
+    }
+
+    #banner::after {
+        background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .banner__content {
+        background: none;
+    }
+
+    /* CUSTOM PRODUCT CSS */
+    section ~ :not(#banner, footer){
+        margin: 6.4rem 1rem;
+    }
+
+    #product__item {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        row-gap: 2.4rem;
+        margin-top: 4rem;
+    }
+
+    /* CUSTOM COLLAGE CSS */
+    #collage__content {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 1fr 1fr 0.25fr;
+        grid-template-areas: 
+        "bags bags"
+        "bags bags"
+        "eddy shoes"
+        "eddy shoes";
+    }
+    .collage__eddy-title {
+        position: absolute;
+        bottom: 1.4rem;
+        left: 1.4rem;
+        color: var(--accent-color1);
+    }
+
+    /* CUSTOM DESC CSS*/
+    #desc {
+        grid-template-columns: auto;
+        grid-template-areas: "item1""item2";
+        gap: .8rem;
+    }
+
+    /* FOOTER */
+    .footer {
+        padding: 4rem 1rem;
+        gap: 4rem;
+    }
+    .footer-content {
+        grid-template-columns: 1fr;
+        grid-template-areas: "item1" "item2" "item3";
+        padding: 0;
+    }
+
+    .footer-content a{
+        color: var(--backLight-Color);
+    }
+
+    .form_content {
+        flex-direction: column;
+        gap: 1.6rem;
+        text-align: center;
+    }
+
+    .form__email, .select-txt {
+        margin-top: 1.2rem;
+    }
+
+    .contact {
+        gap: 0.8rem;
+        text-align: left;
+    }
+    .payment {
+        gap: 0.6rem; 
+    }
+}
+
+/* PC */
+@media (min-width: 890px) {
+    .hideOn-PC {
+        display: none;
+    }
+}
