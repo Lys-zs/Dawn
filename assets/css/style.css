@@ -320,7 +320,7 @@ ul {
 /* CUSTOM BANNER CSS*/
 #banner {
     min-height: 61.6rem;
-    background: url(/dawnnn/assets/img/banner.png) no-repeat center / cover;
+    background: url(../img/banner.png) no-repeat center / cover;
     margin-top: 7.6rem;
     position: relative;
 }
