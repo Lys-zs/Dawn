@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dawn Themse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Inter:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+</head>
+<body>
+    <header id="header">
+        <div class="hideOn-PC header__title">
+            <span class="body-txt2">Free shipping available on all orders!</span>
+        </div>
+        <div class="header__navigation d-grid">
+            <div class="hideOn-PC hamburger d-flex-col">
+                <button type="button" class="btn-plain hamburger__icon d-flex"></button>
+            </div>
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="./assets/img/logo.png" alt="DAWN">
+                </a>
+            </div>
+            <nav class="header__menu">             
+                <ul class="d-flex main__menu body-txt2">
+                    <li class="menu__item">
+                        <a href="Bags" class="d-flex menu__link" onclick="showSub(event)">Bags
+                            <img src="./assets/img/dropdown.png" class="hidenOn-mobile" alt="dropdown">
+                            <img src="./assets/img/right.png" class="hideOn-PC" alt="right">
+                        </a>
+                        <div class="sub__menu">
+                            <ul class="subMenu__list d-flex-col">
+                                <li class="subMenu__item hideOn-PC back-js">
+                                    <button class="d-flex btn-plain body-txt2 btn-back">
+                                        <img src="./assets/img/right.png" alt="left">
+                                        Bags
+                                    </button>
+                                </li>
+                                <li class="subMenu__item">
+                                    <a href="#">
+                                        Shop all
+                                    </a>
+                                </li>
+                                <li class="subMenu__item">
+                                    <a href="#">
+                                        Tote bags
+                                    </a>
+                                </li>
+                                <li class="subMenu__item">
+                                    <a href="#">
+                                        Shoulder bags
+                                    </a>
+                                </li>
+                                <li class="subMenu__item">
+                                    <a href="#">
+                                        Crossbody bags
+                                    </a>
+                                </li>
+                                <li class="subMenu__item">
+                                    <a href="#">
+                                        Top handle bags
+                                    </a>
+                                </li>
+                                <li class="subMenu__item">
+                                    <a href="#">
+                                        Mini bags
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu__item">
+                        <a href="Shoes" class="d-flex menu__link" onclick="showSub(event)">Shoes
+                            <img src="./assets/img/dropdown.png" class="hidenOn-mobile" alt="dropdown">
+                            <img src="./assets/img/right.png" class="hideOn-PC" alt="right">
+                        </a>
+                        <div class="sub__menu">
+                            <ul class="subMenu__list d-flex-col">
+                                <li class="subMenu__item hideOn-PC back-js">
+                                    <button class="d-flex btn-plain body-txt2 btn-back">
+                                        <img src="./assets/img/right.png" alt="left">
+                                        Shoes
+                                    </button>
+                                </li>
+                                <li class="subMenu__item">
+                                    <a href="#">
+                                        Shop all
+                                    </a>
+                                </li>
+                                <li class="subMenu__item">
+                                    <a href="#">
+                                        Tote bags
+                                    </a>
+                                </li>
+                                <li class="subMenu__item">
+                                    <a href="#">
+                                        Shoulder bags
+                                    </a>
+                                </li>
+                                <li class="subMenu__item">
+                                    <a href="#">
+                                        Crossbody bags
+                                    </a>
+                                </li>
+                                <li class="subMenu__item">
+                                    <a href="#">
+                                        Top handle bags
+                                    </a>
+                                </li>
+                                <li class="subMenu__item">
+                                    <a href="#">
+                                        Mini bags
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu__item">
+                        <a href="Lookbook" class="menu__link">
+                            Lookbook
+                        </a>
+                    </li>
+                </ul>
+                <div class="hideOn-PC icon__menu d-flex-col">
+                    <div>
+                        <a href="#" class="d-flex icon__login">
+                            <img src="./assets/img/Vector.png" alt="User">
+                            Login
+                        </a>
+                    </div>
+                    <ul class="d-flex icon__menu-item">
+                        <li class="footer-item">
+                            <a href="#">
+                                <img src="./assets/img/twer.png" alt="twer">
+                            </a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="#">
+                                <img src="./assets/img/fb.png" alt="fb">
+                            </a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="#">
+                                <img src="./assets/img/ig.png" alt="ig">
+                            </a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="#">
+                                <img src="./assets/img/tiktok.png" alt="tiktok">
+                            </a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="#">
+                                <img src="./assets/img/youtube.png" alt="youtube">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Icon layout -->
+            <ul class="d-flex icon-right">
+                <li>
+                    <button class="btn-plain icon__item">
+                        <img src="./assets/img/search.png" alt="Search">
+                    </button>
+                </li>
+                <li class="hidenOn-mobile">
+                    <a href="User" class="icon__item">
+                        <img src="./assets/img/Vector.png" alt="User">
+                    </a>
+                </li>
+                <li>
+                    <a href="Cart" class="icon__cart">
+                        <img src="./assets/img/cart.png" alt="Cart">
+                        <span class="icon__cart-notice hideOn-PC d-flex">4</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section id="toteBags" class="d-flex-col">
+            <h1 class="heading-1">Tote Bags</h1>
+            <div id="toteBags__filter" class="d-flex body-txt2">
+                <ul class="filter__content d-flex">
+                    <li class="filter__headline">Filter</li>
+                    <li class="filter__item">
+                        <button class="btn-plain d-flex filter__btn body-txt2">
+                            Avalability
+                            <img src="./assets/img/dropdown.png" alt="dropdown">
+                        </button>
+                        <div class="sub__filter">
+                            <div class="sub__filter-headline d-flex">
+                                <span>1 selected</span>
+                                <button type="button" class="btn-plain">Reset</button>
+                            </div>
+                            <form action="#" method="post" class="sub__filter-form d-flex-col">
+                                <div class="sub__filter-input  d-flex">
+                                    <input type="checkbox" name="" id="Instock">
+                                    <label class="body2" for="Instock">In stock (6)</label>
+                                </div>
+                                <div class="sub__filter-input d-flex">
+                                    <input type="checkbox" name="" id="OutOfStock">
+                                    <label class="body2" for="OutOfStock">Out of stock (1)</label>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                    <li class="filter__item">
+                        <button class="btn-plain d-flex filter__btn body-txt2">
+                            Price
+                            <img src="./assets/img/dropdown.png" alt="dropdown">
+                        </button>
+                        <div class="sub__filter">
+                            <div class="sub__filter-headline d-flex">
+                                <span>The highest price is $615.00</span>
+                                <button type="button" class="btn-plain">Reset</button>
+                            </div>
+                            <form action="#" method="post" class="sub__filter-form d-flex">
+                                <div class="sub__filter-price">
+                                    <input type="text" placeholder="From">
+                                </div>
+                                <div class="sub__filter-price">
+                                    <input type="text" placeholder="To">
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                    <li class="filter__item">
+                        <button class="btn-plain d-flex filter__btn body-txt2">
+                            Color
+                            <img src="./assets/img/dropdown.png" alt="dropdown">
+                        </button>
+                        <div class="sub__filter">
+                            <div class="sub__filter-headline d-flex sub__btn-reset">
+                                <button type="button" class="btn-plain">Reset</button>
+                            </div>
+                            <form action="#" method="post" class="sub__filter-form d-flex-col">
+                                <div class="sub__filter-input  d-flex">
+                                    <input type="checkbox" name="" id="Butter">
+                                    <label class="body2" for="Butter">Butter (2)</label>
+                                </div>
+                                <div class="sub__filter-input d-flex">
+                                    <input type="checkbox" name="" id="Chocolate">
+                                    <label class="body2" for="Chocolate">Chocolate (2)</label>
+                                </div>
+                                <div class="sub__filter-input d-flex">
+                                    <input type="checkbox" name="" id="Demin">
+                                    <label class="body2" for="Demin">Demin (2)</label>
+                                </div>
+                                <div class="sub__filter-input d-flex">
+                                    <input type="checkbox" name="" id="Dry">
+                                    <label class="body2" for="Dry">Dry Rose (1)</label>
+                                </div>
+                                <div class="sub__filter-input d-flex">
+                                    <input type="checkbox" name="" id="Emerald">
+                                    <label class="body2" for="Emerald">Emerald (1)</label>
+                                </div>
+                                <div class="sub__filter-input d-flex">
+                                    <input type="checkbox" name="" id="Latte">
+                                    <label class="body2" for="Latte">Latte (1)</label>
+                                </div>
+                                <div class="sub__filter-input d-flex">
+                                    <input type="checkbox" name="" id="Milky">
+                                    <label class="body2" for="Milky">Milky (1)</label>
+                                </div>
+                                <div class="sub__filter-input d-flex">
+                                    <input type="checkbox" name="" id="Oceania">
+                                    <label class="body2" for="Oceania">Oceania (1)</label>
+                                </div>
+                                <div class="sub__filter-input d-flex">
+                                    <input type="checkbox" name="" id="OffWhite">
+                                    <label class="body2" for="OffWhite">Off White (1)</label>
+                                </div>
+                                <div class="sub__filter-input d-flex">
+                                    <input type="checkbox" name="" id="Olive">
+                                    <label class="body2" for="Olive">Olive Leaf (1)</label>
+                                </div>
+                                <div class="sub__filter-input d-flex">
+                                    <input type="checkbox" name="" id="Pastel">
+                                    <label class="body2" for="Pastel">Pastel (1)</label>
+                                </div>
+                                <div class="sub__filter-input d-flex">
+                                    <input type="checkbox" name="" id="Pink">
+                                    <label class="body2" for="Pink">Pink Cloud (1)</label>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="filter__content d-flex">
+                    <li class="filter__headline">Sort by</li>
+                    <li>
+                        <button class="btn-plain d-flex filter__btn body-txt2">
+                            Best selling
+                            <img src="./assets/img/dropdown.png" alt="dropdown">
+                        </button>
+                    </li>
+                    <li>6 products</li>
+                </ul>
+            </div>
+            <ul id="product__item" class="d-grid">
+                <li>
+                    <a href="#" class="product__top"> 
+                        <img src="./assets/img/item10.png" alt="item10">
+                    </a>
+                    <div class="product__info d-flex-col">
+                        <h3 class="body-txt2">Hobo Small</h3>
+                        <div class="product-price body-txt1 d-flex-col">
+                            <span>$195.00 CAD</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="product__top"> 
+                        <img src="./assets/img/item14.png" alt="item14">
+                    </a>
+                    <div class="product__info d-flex-col">
+                        <h3 class="body-txt2">Bo Soft Strap</h3>
+                        <div class="product-price body-txt1 d-flex-col">
+                            <span>$365.00 CAD</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="product__top"> 
+                        <img src="./assets/img/item11.png" alt="item6">
+                        <span class="product__sale">Sale</span>
+                    </a>
+                    <div class="product__info d-flex-col">
+                        <h3 class="body-txt2">Hobo Large</h3>
+                        <div class="product-price body-txt1 d-flex-col">
+                            <span>$615.00 CAD</span>
+                            <span>$195.00 CAD</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="product__top"> 
+                        <img src="./assets/img/item5.png" alt="item15">
+                    </a>
+                    <div class="product__info d-flex-col">
+                        <h3 class="body-txt2">Storml</h3>
+                        <div class="product-price body-txt1 d-flex-col">
+                            <span>$545.00 CAD</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <!-- Footer -->
+     <footer id="footer">
+        <div class="footer d-flex-col">
+            <div class="footer-content d-grid">
+                <div id="footer__quick" class="d-flex-col">
+                    <h2 class="heading-3">Quick links</h2>
+                    <div class="body-txt2 d-flex-col footer__link">
+                        <a href="#">Bags</a>
+                        <a href="#">Shoes</a>
+                        <a href="#">Lookbook</a>
+                    </div>
+                </div>
+                <div id="footer__info" class="d-flex-col">
+                    <h2 class="heading-3 default-txt">Info</h2>
+                    <div class="body-txt2 d-flex-col footer__link">
+                        <a href="#">About</a>
+                        <a href="#">Contact us</a>
+                        <a href="#">Shipping policy</a>
+                    </div>
+                </div>
+                <div id="footer__logo" class="hidenOn-mobile">
+                    <a href="index.html">
+                        <h2>DAWN</h2>
+                    </a>
+                </div>
+                <div id="footer__our" class="d-flex-col hideOn-PC">
+                    <h2 class="heading-3">Our mission</h2>
+                    <span class="body-txt2">Quality materials, good designs, craftsmanship and sustainability.</span>
+                </div>
+            </div>
+            <div class="form_content d-flex">
+                <form method="get" action="#">
+                    <label for="in_email" class="heading-3">Subscribe to our emails</label>
+                    <div class="d-flex form__email">
+                        <input type="email" id="in_email" placeholder="Email">
+                        <button class="btn-plain form__btn">
+                            <img src="./assets/img/right.png" alt="confirm">
+                        </button>
+                    </div>
+                </form>
+                <ul class="d-flex icon__menu-item">
+                    <li>
+                        <a href="" class="d-block">
+                            <img src="./assets/img/twer.png" alt="twer">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="d-block">
+                            <img src="./assets/img/fb.png" alt="fb">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="d-block">
+                            <img src="./assets/img/p.png" alt="piads">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="d-block">
+                            <img src="./assets/img/ig.png" alt="ig">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="d-block">
+                            <img src="./assets/img/tiktok.png" alt="tiktok">
+                        </a>
+                    </li>
+                    <li class="footer-item hidenOn-mobile">
+                        <a href="" class="d-block">
+                            <img src="./assets/img/t.png" alt="t">
+                        </a>
+                    </li>
+                    <li class="footer-item hidenOn-mobile">
+                        <a href="" class="d-block">
+                            <img src="./assets/img/c.png" alt="snapchat">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="d-block">
+                            <img src="./assets/img/youtube.png" alt="youtube">
+                        </a>
+                    </li>
+                    <li class="hidenOn-mobile">
+                        <a href="" class="footer-item__link">
+                            <img src="./assets/img/v.png" alt="v">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="form_content d-flex" >
+                <div class="d-flex contact">
+                    <form method="get" action="#">
+                        <label>Country/region</label>
+                        <div class="select-txt">
+                            <select class="contry">
+                                <option value="1">Canada (CAD $)</option>
+                                <option value="2">Canada (CAD $)</option>
+                                <option value="3">Canada (CAD $)</option>
+                            </select>
+                        </div>
+                    </form>
+                    <form method="get" action="#">
+                        <label class="caption-1">Language</label>
+                        <div class="select-txt">
+                            <select class="language">
+                                <option value="1">English</option>
+                                <option value="2">Vietnames</option>
+                                <option value="3">China(CAD $)</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <ul class="d-flex payment">
+                    <li>
+                        <a href="#">
+                            <img src="./assets/img/shoppay.png" class="pay__icon" alt="shop pay">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./assets/img/visa.png" alt="visa">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./assets/img/mastercard.png" alt="mastercard">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./assets/img/pay.png" alt="pay">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./assets/img/googlepay.png" alt="google pay">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./assets/img/amex.png" alt="amex">
+                        </a>
+                    </li>
+                </ul>
+                <span class="hideOn-PC copy-right">© 2021, dawn-theme-default Powered by Shopify</span>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

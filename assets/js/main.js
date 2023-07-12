@@ -29,5 +29,5 @@ function Play() {
     playBtn.style.display = "flex";
   }
 }
-video.addEventListener("click", Play);
-playBtn.addEventListener("click", Play);
+video.addEventListener('click', Play);
+playBtn.addEventListener('click', Play);

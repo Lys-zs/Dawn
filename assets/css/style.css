@@ -2,23 +2,7 @@
     --font-priamry: 'Assistant', sans-serif;
     --fontWeight-primary: 400;
     --fontSize-priamry: 1.3rem;
-
     --lineHeight-priamry: 1.3;
-    --lineHeight-m: 1.5;
-    --lineHeight-l: 1.72;
-    --letterSpacing-s:0.02em;
-    --letterSpacing-m:0.03em;
-    --letterSpacing-l:0.04em;
-    --spacing-s: 0.8rem;
-    --spacing-s-m: 1rem;
-    --spacing-s-ml:1.15rem;
-    --spacing-s-l: 1.4rem;
-    --spacing-m: 1.6rem;
-    --spacing-l: 2.4rem;
-    --spacing-lm: 3.2rem;
-    --spacing-lg: 4rem;
-    --spacing-lr: 5.1rem;
-    --spacing-b: 6.4rem;
     --white-Color: #FFFFFF;
     --whiteDark-Color: #F0F0F0;
     --back-Color: #000000;
@@ -40,7 +24,7 @@ html {
     font-size: 62.5%;
 }   
 
-body {
+body ,button, select {
     font-family: var(--font-priamry);
     font-weight: var(--fontWeight-primary);
     font-size: var(--fontSize-priamry);
@@ -126,10 +110,39 @@ ul {
 .header__navigation, .hamburger,
 .main__menu, .icon__menu-item,
 .icon__cart-notice, #banner , .banner__content,
-.product__headline, #collage__link, .play-button,
-#desc div, .form_content, .form__email 
- {
+.product__headline, .collage__link, .play-button,
+#desc div, .form_content, .form__email, #ToteBags__filter,
+.filter__content, .filter__btn {
     align-items: center;
+}
+
+.menu__link img, 
+.icon__item,
+.icon__login img,
+.icon__cart,
+.collage__link img,
+.form__btn img,
+.icon__menu-item li,
+.filter__btn img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.icon__menu-item,
+.icon-right,
+.subMenu__list,
+#footer__quick,
+#footer__info,
+#footer__our,
+.contact, .payment,
+.filter__content {
+    gap: 2.4rem;
+} 
+
+.product__info, #collage__content,
+.footer-content, #toteBags__filter, 
+.filter__btn {
+    color: var(--backLight-Color);
 }
 
 /* Custom Main CSS */ 
@@ -147,7 +160,6 @@ ul {
     grid-template-columns: auto 1fr auto;
     grid-template-areas: "logo header-nav icon-right";
     padding: 1.6rem 6.4rem;
-    min-height: 7.6rem;
     gap: 5.1rem;
 }
 
@@ -225,19 +237,15 @@ ul {
     display: block;
 }
 
-.menu__link {
-    gap: 0.8rem; 
+.menu__item a:hover,
+.collage__link:hover,
+.footer__link a:hover {
+    text-decoration: underline;
 }
 
-.menu__link img, 
-.icon__item,
-.icon__login img,
-.icon__cart,
-#collage__link img,
-.form__btn img,
-.icon__menu-item li {
-    width: 2rem;
-    height: 2rem;
+.menu__link {
+    padding: 0.8rem 0;
+    gap: 0.8rem; 
 }
 
 .icon-right {
@@ -257,7 +265,7 @@ ul {
 
 .sub__menu {
     position: absolute;
-    top: 230%;
+    top: 140%;
     left: -100%;
     background: var(--white-Color);
     border: 1px solid var(--greyLight-Color);
@@ -307,21 +315,13 @@ ul {
     justify-content: center;
 }
 
-.icon__menu-item,
-.icon-right,
-.subMenu__list,
-#footer__quick,
-#footer__info,
-#footer__our,
-.contact, .payment {
-    gap: 2.4rem;
-} 
-
 /* CUSTOM BANNER CSS*/
+main {
+    margin-top: 6.9rem;
+}
 #banner {
     min-height: 61.6rem;
     background: url(../img/banner.png) no-repeat center / cover;
-    margin-top: 7.6rem;
     position: relative;
 }
 
@@ -364,20 +364,21 @@ ul {
 }
 
 /* CUSTOM PRODUCT CSS */
-section ~ :not(#banner, footer){
+section:not(#banner, footer),
+#video, #desc {
     margin: 6.4rem;
 }
 
 .product__headline {
     gap: 3.2rem;
     text-align: center;
+    margin-bottom: 6.4rem;
 }
 
 #product__item {
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     row-gap: 2.4rem;
-    margin-top: 6.4rem;
 }
 
 .product__top {
@@ -397,10 +398,9 @@ section ~ :not(#banner, footer){
 
 .product__info {
     margin-top: .2rem;
-    color: var(--backLight-Color);
 }
 
-#product-price span:nth-child(2){
+.product-price span:nth-child(2){
     text-decoration: line-through;
 }
 
@@ -411,7 +411,6 @@ section ~ :not(#banner, footer){
     grid-template-areas: "bags bags shoes" "bags bags eddy";
     gap:1rem;
     margin-top: 2.4rem;
-    color: var(--backLight-Color);
 }
 
 #collage__bags {
@@ -422,7 +421,7 @@ section ~ :not(#banner, footer){
     grid-area: shoes;
 }
 
-#collage__link {
+.collage__link {
     padding: 1.4rem 2.4rem;
     gap: 1.15rem;
     background: var(--whiteDark-Color);
@@ -498,7 +497,6 @@ section ~ :not(#banner, footer){
     grid-template-areas: "item1 item2 item3";
     gap: 4rem;
     padding: 0 4rem;
-    color: var(--backLight-Color);
 }
 
 .footer-content a{
@@ -563,10 +561,6 @@ section ~ :not(#banner, footer){
 .contact,
 .contry, .language {
     color: rgba(18, 18, 18, 0.75);
-    font-family: var(--font-priamry);
-    font-weight: var(--fontWeight-primary);
-    font-size: var(--fontSize-priamry);
-    line-height: var(--lineHeight-priamry);
 }
 
 .select-txt {
@@ -596,4 +590,77 @@ section ~ :not(#banner, footer){
 
 .copy-right {
     font-size: 1rem;
+}
+
+/* ************** ToteBags ************* */
+#toteBags {
+    padding-top: 6.4rem;
+    gap: 3.2rem;
+}
+
+#toteBags__filter {
+    justify-content: space-between;
+}
+
+.filter__headline::after {
+    content: ":";
+}
+
+.filter__btn {
+    gap: 0.8rem;
+}
+
+.filter__item {
+    position: relative;
+}
+
+.filter__item:hover .sub__filter{
+    display: block;
+}
+
+.sub__filter {
+    position: absolute;
+    left: -65%;
+    z-index: 1;
+    background-color: var(--white-Color);
+    border: 1px solid var(--greyLight-Color);
+    min-width: 30rem;
+    transform-origin: 50% top;
+    animation: subGrowth .25s ease-in;
+    display: none;
+}
+
+.sub__filter-headline {
+    justify-content: space-between;
+    padding: 8px 1.6rem;
+    border: 1px solid var(--greyLight-Color);
+}
+
+.sub__filter-headline button {
+    text-decoration: underline;
+}
+
+.sub__btn-reset {
+    justify-content: end;
+}
+
+.sub__filter-form {
+    padding: 8px 1.6rem;
+    flex-wrap: nowrap;
+    gap: 1.8rem;
+}
+
+.sub__filter-input  {
+    gap: .6rem;
+    align-items: center;
+}
+
+.sub__filter-price {
+    padding-left: 7px;
+}
+
+.sub__filter-price input{
+    max-width: 125px;
+    padding: 15px 14px 17px 16px;
+    outline: none;
 }

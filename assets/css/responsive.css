@@ -124,8 +124,10 @@
     }
 
     /* CUSTOM BANNER CSS */
+    main {
+        margin-top: 9.4rem;
+    }
     #banner {
-        margin-top: 9.2rem;
         min-height: 39.8rem;
         background-image: url(../img/banner-mobie.png);
     }
@@ -145,9 +147,6 @@
 
     #product__item {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        row-gap: 2.4rem;
-        margin-top: 4rem;
     }
 
     /* CUSTOM COLLAGE CSS */
@@ -209,7 +208,7 @@
 }
 
 /* PC */
-@media (min-width: 890px) {
+@media (min-width: 990px) {
     .hideOn-PC {
         display: none;
     }
