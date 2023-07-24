@@ -110,9 +110,9 @@ ul {
 .header__navigation, .hamburger,
 .main__menu, .icon__menu-item,
 .icon__cart-notice, #banner , .banner__content,
-.product__headline, .collage__link, .play-button,
-#desc div, .form_content, .form__email, #ToteBags__filter,
-.filter__content, .filter__btn {
+.collage__link, .play-button,
+#desc div, .form_content, .form__email, #ToteBags__filter, 
+.filter__btn {
     align-items: center;
 }
 
@@ -135,7 +135,7 @@ ul {
 #footer__info,
 #footer__our,
 .contact, .payment,
-.filter__content {
+.filter__left-list, .filter__right {
     gap: 2.4rem;
 } 
 
@@ -364,15 +364,14 @@ main {
 }
 
 /* CUSTOM PRODUCT CSS */
-section:not(#banner, footer),
-#video, #desc {
-    margin: 6.4rem;
+#container {
+    padding: 6.4rem;
+    gap: 6.4rem;
 }
 
 .product__headline {
     gap: 3.2rem;
     text-align: center;
-    margin-bottom: 6.4rem;
 }
 
 #product__item {
@@ -594,7 +593,6 @@ section:not(#banner, footer),
 
 /* ************** ToteBags ************* */
 #toteBags {
-    padding-top: 6.4rem;
     gap: 3.2rem;
 }
 
@@ -632,7 +630,7 @@ section:not(#banner, footer),
 
 .sub__filter-headline {
     justify-content: space-between;
-    padding: 8px 1.6rem;
+    padding: .8rem 1.6rem;
     border: 1px solid var(--greyLight-Color);
 }
 
@@ -645,7 +643,7 @@ section:not(#banner, footer),
 }
 
 .sub__filter-form {
-    padding: 8px 1.6rem;
+    padding: .8rem 1.6rem;
     flex-wrap: nowrap;
     gap: 1.8rem;
 }
@@ -656,11 +654,22 @@ section:not(#banner, footer),
 }
 
 .sub__filter-price {
-    padding-left: 7px;
+    padding-left: .7rem;
 }
 
 .sub__filter-price input{
-    max-width: 125px;
-    padding: 15px 14px 17px 16px;
+    max-width: 12.5rem;
+    padding: 1.5rem 1.4rem 1.7rem 1.6rem;
     outline: none;
+}
+
+.filterAndSort,
+.filter__btn2 {
+    gap: .8rem;
+}
+
+.filterAndSort img,
+.filter__btn2 img {
+    width: 2rem;
+    height: 2rem;
 }

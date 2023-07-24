@@ -181,175 +181,203 @@
         </div>
     </header>
     <main>
-        <section id="toteBags" class="d-flex-col">
-            <h1 class="heading-1">Tote Bags</h1>
-            <div id="toteBags__filter" class="d-flex body-txt2">
-                <ul class="filter__content d-flex">
-                    <li class="filter__headline">Filter</li>
-                    <li class="filter__item">
-                        <button class="btn-plain d-flex filter__btn body-txt2">
-                            Avalability
-                            <img src="./assets/img/dropdown.png" alt="dropdown">
-                        </button>
-                        <div class="sub__filter">
-                            <div class="sub__filter-headline d-flex">
-                                <span>1 selected</span>
-                                <button type="button" class="btn-plain">Reset</button>
+        <div id="container">
+            <section id="toteBags" class="d-flex-col">
+                <h1 class="heading-1">Tote Bags</h1>
+                <div id="toteBags__filter" class="d-flex body-txt2">
+                    <button class="btn-plain filterAndSort d-flex hideOn-PC">
+                        <img src="./assets/img/filter.png" alt="filter">
+                        <span>Filter and sort</span>
+                    </button>
+                    <div class="filter__left d-flex">
+                        <div class="filter__left-content d-flex">
+                            <div class="filter__left-header hideOn-PC">
+                                <div class="d-flex-col filter__left-headline">
+                                    <h2 class="body-txt2">Filter and sort</h2>
+                                    <span class="micro">6 of 6 product</span>
+                                </div>
+                                <button class="filter__left-header--btn btn-plain"><img src="./assets/img/close.png" alt="close"></button>
                             </div>
-                            <form action="#" method="post" class="sub__filter-form d-flex-col">
-                                <div class="sub__filter-input  d-flex">
-                                    <input type="checkbox" name="" id="Instock">
-                                    <label class="body2" for="Instock">In stock (6)</label>
-                                </div>
-                                <div class="sub__filter-input d-flex">
-                                    <input type="checkbox" name="" id="OutOfStock">
-                                    <label class="body2" for="OutOfStock">Out of stock (1)</label>
-                                </div>
-                            </form>
+                            <ul class="filter__left-list d-flex">
+                                <li class="filter__headline hidenOn-mobile">Filter</li>
+                                <li class="filter__item">
+                                    <button class="btn-plain d-flex filter__btn body-txt2">
+                                        Avalability
+                                        <img src="./assets/img/dropdown.png" alt="dropdown">
+                                    </button>
+                                    <div class="sub__filter">
+                                        <div class="sub__filter-headline d-flex">
+                                            <span>1 selected</span>
+                                            <button type="button" class="btn-plain">Reset</button>
+                                        </div>
+                                        <form action="#" method="post" class="sub__filter-form d-flex-col">
+                                            <div class="sub__filter-input  d-flex">
+                                                <input type="checkbox" name="" id="Instock">
+                                                <label class="body2" for="Instock">In stock (6)</label>
+                                            </div>
+                                            <div class="sub__filter-input d-flex">
+                                                <input type="checkbox" name="" id="OutOfStock">
+                                                <label class="body2" for="OutOfStock">Out of stock (1)</label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+                                <li class="filter__item">
+                                    <button class="btn-plain d-flex filter__btn body-txt2">
+                                        Price
+                                        <img src="./assets/img/dropdown.png" alt="dropdown">
+                                    </button>
+                                    <div class="sub__filter">
+                                        <div class="sub__filter-headline d-flex">
+                                            <span>The highest price is $615.00</span>
+                                            <button type="button" class="btn-plain">Reset</button>
+                                        </div>
+                                        <form action="#" method="post" class="sub__filter-form d-flex">
+                                            <div class="sub__filter-price">
+                                                <input type="text" placeholder="From">
+                                            </div>
+                                            <div class="sub__filter-price">
+                                                <input type="text" placeholder="To">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+                                <li class="filter__item">
+                                    <button class="btn-plain d-flex filter__btn body-txt2">
+                                        Color
+                                        <img src="./assets/img/dropdown.png" alt="dropdown">
+                                    </button>
+                                    <div class="sub__filter">
+                                        <div class="sub__filter-headline d-flex sub__btn-reset">
+                                            <button type="button" class="btn-plain">Reset</button>
+                                        </div>
+                                        <form action="#" method="post" class="sub__filter-form d-flex-col">
+                                            <div class="sub__filter-input  d-flex">
+                                                <input type="checkbox" name="" id="Butter">
+                                                <label class="body2" for="Butter">Butter (2)</label>
+                                            </div>
+                                            <div class="sub__filter-input d-flex">
+                                                <input type="checkbox" name="" id="Chocolate">
+                                                <label class="body2" for="Chocolate">Chocolate (2)</label>
+                                            </div>
+                                            <div class="sub__filter-input d-flex">
+                                                <input type="checkbox" name="" id="Demin">
+                                                <label class="body2" for="Demin">Demin (2)</label>
+                                            </div>
+                                            <div class="sub__filter-input d-flex">
+                                                <input type="checkbox" name="" id="Dry">
+                                                <label class="body2" for="Dry">Dry Rose (1)</label>
+                                            </div>
+                                            <div class="sub__filter-input d-flex">
+                                                <input type="checkbox" name="" id="Emerald">
+                                                <label class="body2" for="Emerald">Emerald (1)</label>
+                                            </div>
+                                            <div class="sub__filter-input d-flex">
+                                                <input type="checkbox" name="" id="Latte">
+                                                <label class="body2" for="Latte">Latte (1)</label>
+                                            </div>
+                                            <div class="sub__filter-input d-flex">
+                                                <input type="checkbox" name="" id="Milky">
+                                                <label class="body2" for="Milky">Milky (1)</label>
+                                            </div>
+                                            <div class="sub__filter-input d-flex">
+                                                <input type="checkbox" name="" id="Oceania">
+                                                <label class="body2" for="Oceania">Oceania (1)</label>
+                                            </div>
+                                            <div class="sub__filter-input d-flex">
+                                                <input type="checkbox" name="" id="OffWhite">
+                                                <label class="body2" for="OffWhite">Off White (1)</label>
+                                            </div>
+                                            <div class="sub__filter-input d-flex">
+                                                <input type="checkbox" name="" id="Olive">
+                                                <label class="body2" for="Olive">Olive Leaf (1)</label>
+                                            </div>
+                                            <div class="sub__filter-input d-flex">
+                                                <input type="checkbox" name="" id="Pastel">
+                                                <label class="body2" for="Pastel">Pastel (1)</label>
+                                            </div>
+                                            <div class="sub__filter-input d-flex">
+                                                <input type="checkbox" name="" id="Pink">
+                                                <label class="body2" for="Pink">Pink Cloud (1)</label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+                                <li class="filter__item d-flex hideOn-PC">
+                                    <span class="filter__headline">Sort by</span>
+                                    <button class="btn-plain d-flex filter__btn2 body-txt2">
+                                        Best selling
+                                        <img src="./assets/img/dropdown.png" alt="dropdown">
+                                    </button>
+                                </li>
+                            </ul>
                         </div>
-                    </li>
-                    <li class="filter__item">
-                        <button class="btn-plain d-flex filter__btn body-txt2">
-                            Price
-                            <img src="./assets/img/dropdown.png" alt="dropdown">
-                        </button>
-                        <div class="sub__filter">
-                            <div class="sub__filter-headline d-flex">
-                                <span>The highest price is $615.00</span>
-                                <button type="button" class="btn-plain">Reset</button>
-                            </div>
-                            <form action="#" method="post" class="sub__filter-form d-flex">
-                                <div class="sub__filter-price">
-                                    <input type="text" placeholder="From">
-                                </div>
-                                <div class="sub__filter-price">
-                                    <input type="text" placeholder="To">
-                                </div>
-                            </form>
+                        <div class="d-flex filter__left-footer hideOn-PC">
+                            <button class="btn-plain">Clear All</button>
+                            <button class="btn-plain">Apply</button>
                         </div>
-                    </li>
-                    <li class="filter__item">
-                        <button class="btn-plain d-flex filter__btn body-txt2">
-                            Color
-                            <img src="./assets/img/dropdown.png" alt="dropdown">
-                        </button>
-                        <div class="sub__filter">
-                            <div class="sub__filter-headline d-flex sub__btn-reset">
-                                <button type="button" class="btn-plain">Reset</button>
-                            </div>
-                            <form action="#" method="post" class="sub__filter-form d-flex-col">
-                                <div class="sub__filter-input  d-flex">
-                                    <input type="checkbox" name="" id="Butter">
-                                    <label class="body2" for="Butter">Butter (2)</label>
-                                </div>
-                                <div class="sub__filter-input d-flex">
-                                    <input type="checkbox" name="" id="Chocolate">
-                                    <label class="body2" for="Chocolate">Chocolate (2)</label>
-                                </div>
-                                <div class="sub__filter-input d-flex">
-                                    <input type="checkbox" name="" id="Demin">
-                                    <label class="body2" for="Demin">Demin (2)</label>
-                                </div>
-                                <div class="sub__filter-input d-flex">
-                                    <input type="checkbox" name="" id="Dry">
-                                    <label class="body2" for="Dry">Dry Rose (1)</label>
-                                </div>
-                                <div class="sub__filter-input d-flex">
-                                    <input type="checkbox" name="" id="Emerald">
-                                    <label class="body2" for="Emerald">Emerald (1)</label>
-                                </div>
-                                <div class="sub__filter-input d-flex">
-                                    <input type="checkbox" name="" id="Latte">
-                                    <label class="body2" for="Latte">Latte (1)</label>
-                                </div>
-                                <div class="sub__filter-input d-flex">
-                                    <input type="checkbox" name="" id="Milky">
-                                    <label class="body2" for="Milky">Milky (1)</label>
-                                </div>
-                                <div class="sub__filter-input d-flex">
-                                    <input type="checkbox" name="" id="Oceania">
-                                    <label class="body2" for="Oceania">Oceania (1)</label>
-                                </div>
-                                <div class="sub__filter-input d-flex">
-                                    <input type="checkbox" name="" id="OffWhite">
-                                    <label class="body2" for="OffWhite">Off White (1)</label>
-                                </div>
-                                <div class="sub__filter-input d-flex">
-                                    <input type="checkbox" name="" id="Olive">
-                                    <label class="body2" for="Olive">Olive Leaf (1)</label>
-                                </div>
-                                <div class="sub__filter-input d-flex">
-                                    <input type="checkbox" name="" id="Pastel">
-                                    <label class="body2" for="Pastel">Pastel (1)</label>
-                                </div>
-                                <div class="sub__filter-input d-flex">
-                                    <input type="checkbox" name="" id="Pink">
-                                    <label class="body2" for="Pink">Pink Cloud (1)</label>
-                                </div>
-                            </form>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="filter__content d-flex">
-                    <li class="filter__headline">Sort by</li>
+                    </div>
+                    <ul class="filter__right d-flex">
+                        <li class="filter__headline hidenOn-mobile">Sort by</li>
+                        <li class="hidenOn-mobile">
+                            <button class="btn-plain d-flex filter__btn body-txt2">
+                                Best selling
+                                <img src="./assets/img/dropdown.png" alt="dropdown">
+                            </button>
+                        </li>
+                        <li>6 products</li>
+                    </ul>
+                </div>
+                <ul id="product__item" class="d-grid">
                     <li>
-                        <button class="btn-plain d-flex filter__btn body-txt2">
-                            Best selling
-                            <img src="./assets/img/dropdown.png" alt="dropdown">
-                        </button>
+                        <a href="#" class="product__top"> 
+                            <img src="./assets/img/item10.png" alt="item10">
+                        </a>
+                        <div class="product__info d-flex-col">
+                            <h3 class="body-txt2">Hobo Small</h3>
+                            <div class="product-price body-txt1 d-flex-col">
+                                <span>$195.00 CAD</span>
+                            </div>
+                        </div>
                     </li>
-                    <li>6 products</li>
+                    <li>
+                        <a href="#" class="product__top"> 
+                            <img src="./assets/img/item14.png" alt="item14">
+                        </a>
+                        <div class="product__info d-flex-col">
+                            <h3 class="body-txt2">Bo Soft Strap</h3>
+                            <div class="product-price body-txt1 d-flex-col">
+                                <span>$365.00 CAD</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="product__top"> 
+                            <img src="./assets/img/item11.png" alt="item6">
+                            <span class="product__sale">Sale</span>
+                        </a>
+                        <div class="product__info d-flex-col">
+                            <h3 class="body-txt2">Hobo Large</h3>
+                            <div class="product-price body-txt1 d-flex-col">
+                                <span>$615.00 CAD</span>
+                                <span>$195.00 CAD</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="product__top"> 
+                            <img src="./assets/img/item5.png" alt="item15">
+                        </a>
+                        <div class="product__info d-flex-col">
+                            <h3 class="body-txt2">Storml</h3>
+                            <div class="product-price body-txt1 d-flex-col">
+                                <span>$545.00 CAD</span>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
-            </div>
-            <ul id="product__item" class="d-grid">
-                <li>
-                    <a href="#" class="product__top"> 
-                        <img src="./assets/img/item10.png" alt="item10">
-                    </a>
-                    <div class="product__info d-flex-col">
-                        <h3 class="body-txt2">Hobo Small</h3>
-                        <div class="product-price body-txt1 d-flex-col">
-                            <span>$195.00 CAD</span>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#" class="product__top"> 
-                        <img src="./assets/img/item14.png" alt="item14">
-                    </a>
-                    <div class="product__info d-flex-col">
-                        <h3 class="body-txt2">Bo Soft Strap</h3>
-                        <div class="product-price body-txt1 d-flex-col">
-                            <span>$365.00 CAD</span>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#" class="product__top"> 
-                        <img src="./assets/img/item11.png" alt="item6">
-                        <span class="product__sale">Sale</span>
-                    </a>
-                    <div class="product__info d-flex-col">
-                        <h3 class="body-txt2">Hobo Large</h3>
-                        <div class="product-price body-txt1 d-flex-col">
-                            <span>$615.00 CAD</span>
-                            <span>$195.00 CAD</span>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#" class="product__top"> 
-                        <img src="./assets/img/item5.png" alt="item15">
-                    </a>
-                    <div class="product__info d-flex-col">
-                        <h3 class="body-txt2">Storml</h3>
-                        <div class="product-price body-txt1 d-flex-col">
-                            <span>$545.00 CAD</span>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </section>
+            </section>
+        </div>
     </main>
     <!-- Footer -->
      <footer id="footer">

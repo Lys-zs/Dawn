@@ -52,7 +52,7 @@
     .main__menu {
         grid-area: unset;
         flex-direction: column;
-        align-items: flex-start;
+        flex-wrap: unset;
         gap: 1rem;
         overflow-y: auto;
         overflow-x: hidden;
@@ -141,8 +141,9 @@
     }
 
     /* CUSTOM PRODUCT CSS */
-    section ~ :not(#banner, footer){
-        margin: 6.4rem 1rem;
+    #container {
+        padding: 4rem 1rem;
+        gap: 4rem;
     }
 
     #product__item {
@@ -205,6 +206,105 @@
     .payment {
         gap: 0.6rem; 
     }
+
+
+
+
+    #toteBags__filter {
+        position: relative;
+    }
+
+    .filter__left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+        z-index: 1;
+        width: 100%;
+        max-width: 33.6rem;
+        background-color: var(--white-Color);
+        box-shadow: inset -1px 0px 0px var(--greyShadown);
+        height: calc(100vh - 22rem);
+        transition: transform .35s ease-in-out;
+        transform: translateX(-110%);
+    }
+
+    .filter__left-content {
+        width: 100%;
+    }
+
+    .filter__left-header {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid var(--greyShadown);
+        position: relative;
+        padding: .5rem 0;
+    }
+
+    .filter__left-headline {
+        gap: .4rem;
+    }
+
+    .micro {
+        font-size: 1rem;
+        line-height: normal;
+    }
+
+    .filter__left-header--btn {
+        position: absolute;
+        top: .5rem;
+        right: 0;
+    }
+
+    .filter__left-header--btn img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .filter__left-list {
+        width: 100%;
+        padding: 64px 32px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .filter__item {
+        width: 100%;
+        padding: 8px 0;
+    }
+
+    .filter__item:last-child {
+        justify-content: space-between;
+    }
+
+    .filter__btn {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .filter__left-footer {
+        width: 100%;
+        padding: 16px 24px;
+        justify-content: space-between;
+        border-top: 1px solid var(--greyShadown);
+    }
+
+    .filter__left-footer button {
+        width: 130px;
+        padding: 8px 0;
+        text-decoration: underline;
+    }
+
+   .filter__left-footer button:last-child {
+        padding: 16px;
+        background-color: var(--backLight-Color);
+        color: var(--white-Color);
+        text-decoration: none;
+   }
+    
 }
 
 /* PC */
